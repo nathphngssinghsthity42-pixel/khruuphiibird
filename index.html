@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>khruuphiibird</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;background:#000}
+.background-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);z-index:-2}
+.card{position:relative;max-width:760px;width:100%;padding:30px;border-radius:32px;overflow:hidden;background:rgba(255,255,255,.12);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15)}
+.card-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2;z-index:-1}
+.top{display:flex;justify-content:flex-end;gap:10px}
+.top a{color:#fff;text-decoration:none;background:rgba(255,255,255,.15);padding:12px 16px;border-radius:14px}
+.profile{width:120px;height:120px;border-radius:50%;display:block;margin:20px auto;border:3px solid rgba(255,255,255,.3);object-fit:cover}
+h1,p,.thai{color:#fff;text-align:center}
+.thai{margin-top:6px}
+.social,.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.social{margin:20px 0}
+.social a{color:#fff;background:rgba(255,255,255,.15);width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.links{flex-direction:column}
+.links a{color:#fff;text-decoration:none;padding:18px;border-radius:18px;background:rgba(255,255,255,.15);text-align:center}
+.kahoot{background:linear-gradient(135deg,#6f2cff,#9b4dff);font-weight:700}
+</style>
+</head>
+<body>
+<video class="background-video" autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video>
+<div class="overlay"></div>
+<div class="card">
+<video class="card-video" autoplay muted loop playsinline><source src="card.mp4" type="video/mp4"></video>
+
+<div class="top">
+<a href="https://create.kahoot.it/profiles/915f17f6-0d7e-497d-a51a-ae07bdf6c25c" target="_blank">Subscribe</a>
+<a href="#" onclick="sharePage()"><i class="fa-solid fa-share-nodes"></i></a>
+</div>
+
+<img src="profile.jpg" class="profile">
+<h1>khruuphiibird</h1>
+<div class="thai">ครูพี่เบิด</div>
+<p>ยินดีต้อนรับสู่เว็บไซต์ของครูพี่เบิด</p>
+
+<div class="social">
+<a href="https://www.instagram.com/khruuphiibird?igsh=MWNqeDE4djM5ZDh0Nw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@ebirdnahee?_r=1&_t=ZS-97685FMR78D" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a href="https://discord.gg/cQHzfRVh" target="_blank"><i class="fab fa-discord"></i></a>
+</div>
+
+<div class="links">
+<a class="kahoot" href="https://create.kahoot.it/profiles/915f17f6-0d7e-497d-a51a-ae07bdf6c25c" target="_blank">Kahoot Profile</a>
+<a href="https://www.instagram.com/khruuphiibird?igsh=MWNqeDE4djM5ZDh0Nw%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@ebirdnahee?_r=1&_t=ZS-97685FMR78D" target="_blank">TikTok</a>
+<a href="https://discord.gg/cQHzfRVh" target="_blank">Discord Community</a>
+</div>
+</div>
+
+<script>
+function sharePage(){
+const shareData={title:'khruuphiibird',text:'ติดตามครูพี่เบิด',url:window.location.href};
+if(navigator.share){navigator.share(shareData);}
+else{navigator.clipboard.writeText(window.location.href);alert('คัดลอกลิงก์แล้ว');}
+}
+</script>
+</body>
+</html>
